@@ -23,7 +23,6 @@ namespace Baby
                 Console.Write("Why? ");
                 answer = Console.ReadLine().ToLower();
             }
-
             Console.WriteLine("Oh... Okay");
         }
     }
