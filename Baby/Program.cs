@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Baby
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var questions = new List<string>()
             { "Why is the sky blue?: ",
@@ -16,12 +16,12 @@ namespace Baby
             var rnd = new Random();
 
             Console.Write(questions[rnd.Next(questions.Count)]);
-            var answer = Console.ReadLine().ToLower();
+            var answer = Console.ReadLine()?.ToLower();
 
             while (answer != "just because")
             {
                 Console.Write("Why? ");
-                answer = Console.ReadLine().ToLower();
+                answer = Console.ReadLine()?.ToLower();
             }
             Console.WriteLine("Oh... Okay");
         }
